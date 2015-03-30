@@ -4,6 +4,7 @@ extends Spatial
 var menu_open = true
 var pause = true
 var current
+var current_demo
 var menu
 
 var cams
@@ -40,6 +41,7 @@ func clear_demo():
 		child.queue_free()
 
 func load_scene(scene):
+	current_demo = scene
 	var s = ResourceLoader.load(scene)
 	current.add_child(s.instance())
 	cams = get_tree().get_nodes_in_group("cam")
@@ -77,3 +79,14 @@ func _on_Demo3_pressed():
 
 func _on_Clear_pressed():
 	clear_demo()
+	current_demo = null
+
+func restart_demo():
+	if current_demo == null:
+		return
+	toggle_menu()
+	clear_demo()
+	load_scene(current_demo)
+
+func _on_Restart_pressed():
+	restart_demo()
