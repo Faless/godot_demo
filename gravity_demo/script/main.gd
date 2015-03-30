@@ -25,7 +25,7 @@ func _input(event):
 			toggle_menu()
 		elif not menu_open:
 			toggle_pause()
-	if event.is_action("change_cam") && event.is_pressed() && !event.is_echo():
+	if event.is_action("change_cam") && event.is_pressed() && !event.is_echo() && cams.size() > 0:
 		curr_cam += 1
 		if curr_cam >= cams.size():
 			curr_cam = 0
