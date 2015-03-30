@@ -63,17 +63,17 @@ func _on_Exit_pressed():
 func _on_Demo1_pressed():
 	toggle_menu()
 	clear_demo()
-	load_scene("res://demo/demo1.scn")
+	load_scene("res://demo/thedemo1.scn")
 
 func _on_Demo2_pressed():
 	toggle_menu()
 	clear_demo()
-	load_scene("res://demo/demo2.scn")
+	load_scene("res://demo/thedemo2.scn")
 
 func _on_Demo3_pressed():
 	toggle_menu()
 	clear_demo()
-	load_scene("res://demo/demo3.scn")
+	load_scene("res://demo/thedemo3.scn")
 
 func _on_Clear_pressed():
 	clear_demo()
