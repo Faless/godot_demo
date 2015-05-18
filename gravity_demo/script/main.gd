@@ -77,6 +77,11 @@ func _on_Demo3_pressed():
 	clear_demo()
 	load_scene("res://demo/thedemo3.scn")
 
+func _on_Demo4_pressed():
+	toggle_menu()
+	clear_demo()
+	load_scene("res://demo/thedemo4.scn")
+
 func _on_Clear_pressed():
 	clear_demo()
 	current_demo = null
